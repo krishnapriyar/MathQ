@@ -119,6 +119,7 @@ public class QuestionActivity extends AppCompatActivity implements LevelFragment
     public void nextQuestion(String option){
 
         checkAnswer(option,questions.get(questionNo));
+
         if(questionNo!=9){
             setFragment(questions.get(++questionNo));
         }

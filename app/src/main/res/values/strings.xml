@@ -20,6 +20,25 @@
     <string name="hard">Hard</string>
     <string name="title_activity_main_page_loading">MainPageLoading</string>
     <string name="playagain">Play Again</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="image">Profile Image</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="pooh">Pooh</string>
+    <string name="cute_girl">Cute Girl</string>
+    <string name="elephant">Elephant</string>
+    <string name="blue">Blue</string>
+
+    <string name="userName">User Name</string>
+    <string name="profile_image">Profile Image</string>
+
+
+    <string name="History">History</string>
+    <string name="Level">Level</string>
 
 
 </resources>

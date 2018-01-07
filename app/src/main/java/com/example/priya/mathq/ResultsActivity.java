@@ -1,6 +1,8 @@
 package com.example.priya.mathq;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +24,12 @@ public class ResultsActivity extends AppCompatActivity {
         String time = bundle.getString("TIME");
         textView1.setText("You have answered "+correct+"/ 10 questions correctly.");
         textView2.setText("Time taken : "+ time);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int score = sharedPreferences.getInt("correct", 0);
+        editor.putInt("correct", score+correct);
+        editor.apply();
 
 
 

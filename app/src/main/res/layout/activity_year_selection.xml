@@ -11,7 +11,7 @@
         android:id="@+id/y1"
         android:layout_width="157dp"
         android:layout_height="74dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="156dp"
         android:background="#B3E5FC"
         android:fontFamily="casual"
@@ -44,7 +44,7 @@
         android:id="@+id/y2"
         android:layout_width="157dp"
         android:layout_height="74dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:background="#B2EBF2"
         android:fontFamily="casual"
@@ -78,7 +78,7 @@
         android:layout_width="157dp"
         android:layout_height="74dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
         android:background="#C5CAE9"
         android:fontFamily="casual"
@@ -88,7 +88,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/y2"
-        app:layout_constraintVertical_bias="0.07"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="@string/y3" />
 
     <Button
@@ -106,9 +106,24 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toEndOf="@+id/y3"
         app:layout_constraintTop_toBottomOf="@+id/y5"
-        app:layout_constraintVertical_bias="0.069"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="@string/y6" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <include
+        layout="@layout/app_bar_navigation_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </android.support.constraint.ConstraintLayout>

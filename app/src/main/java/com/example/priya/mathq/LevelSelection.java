@@ -72,14 +72,16 @@ public class LevelSelection extends AppCompatActivity {
         final Button medium = findViewById(R.id.medium);
         medium.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(LevelSelection.this, LoadLevelActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString("YEAR", YEAR);
-                bundle.putString("DIFFICULTY", "medium");
-                intent.putExtras(bundle);
 
-
-                startActivity(intent);
+                showMedAlert();
+//                Intent intent = new Intent(LevelSelection.this, LoadLevelActivity.class);
+//                Bundle bundle = new Bundle();
+//                bundle.putString("YEAR", YEAR);
+//                bundle.putString("DIFFICULTY", "medium");
+//                intent.putExtras(bundle);
+//
+//
+//                startActivity(intent);
             }
         });
 
@@ -101,6 +103,27 @@ public class LevelSelection extends AppCompatActivity {
                         Intent intent = new Intent(LevelSelection.this, YearSelection.class);
                         startActivity(intent);
 
+                    }
+                });
+
+
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
+    }
+
+
+    private void showMedAlert(){
+
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(LevelSelection.this);
+        builder1.setMessage("Oops, this section is not currently available. ");
+        builder1.setCancelable(false);
+
+        builder1.setPositiveButton(
+                "Select Again",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
                     }
                 });
 
