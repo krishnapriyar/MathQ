@@ -13,6 +13,7 @@ import android.view.*;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -41,6 +42,7 @@ public class LoadLevelActivity extends AppCompatActivity {
     static String DIFFICULTY;
     static LinkedList<Question> questions = new LinkedList<>();
     private static final int QUESTIONS_IN_LEVEL = 10;
+    TextView tv5;
 
 
 
@@ -58,6 +60,8 @@ public class LoadLevelActivity extends AppCompatActivity {
         if(pb.getProgress()!=100){
             but.setVisibility(View.INVISIBLE);
         }
+
+        tv5 = (TextView) findViewById(R.id.textView5) ;
 
         setDatabaseRef();
 
@@ -180,6 +184,8 @@ public class LoadLevelActivity extends AppCompatActivity {
 
             if(pb.getProgress()==100){
                 but.setVisibility(View.VISIBLE);
+                tv5.setText("Done!");
+
 
             }
         }

@@ -39,6 +39,7 @@
 
     <string name="History">History</string>
     <string name="Level">Level</string>
+    <string name="wait">Please wait while we download neccesary resources...</string>
 
 
 </resources>

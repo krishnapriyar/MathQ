@@ -1,6 +1,6 @@
 package com.example.priya.mathq;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -27,7 +27,7 @@ public class ThirdFragment extends Fragment {
         SharedPreferences sharedPreferences = getActivity().getSharedPreferences("Settings", Context.MODE_PRIVATE);
         int res = sharedPreferences.getInt("profileImage", R.drawable.image1);
         int correct = sharedPreferences.getInt("correct", 28);
-        String name = sharedPreferences.getString("username", "User");
+        String name = sharedPreferences.getString("userName", "User");
 
         tx4.setText("Congratulations, " + name+". "+correct +" questions answered correctly!");
 

@@ -1,5 +1,6 @@
 package com.example.priya.mathq;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -88,10 +89,10 @@ public class NavigationDrawer extends AppCompatActivity
             fragmentManager.beginTransaction().replace(R.id.content_frame, new FirstFragment())
                     .commit();
         } else if (id == R.id.nav_second_layout) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new SecondFragment())
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new Fragment())
                     .commit();
         } else if (id == R.id.nav_third_layout) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new ThirdFragment())
+            fragmentManager.beginTransaction().replace(R.id.content_frame, new Fragment())
                     .commit();
         } else if (id == R.id.nav_share) {
 
